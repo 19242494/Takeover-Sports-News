@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact</title>
+  <link rel="stylesheet" href="CSS/mystyle.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter;
+      background-color: yellow;
+    }
+  
+    .contact-title {
+      width: 260px;
+      margin: 60px auto 40px;
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 20px;
+    }
+  
+    .form-row {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      align-items: flex-start;
+    }
+
+    .left-form {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+  
+    .left-form input {
+      width: 300px;
+      padding: 15px;
+      background: black;
+      color: white;
+      border: none;
+      font-size: 16px;
+    }
+  
+    .left-form input::placeholder {
+      color: white;
+      text-align: center;
+    }
+
+    .right-form textarea {
+      width: 380px;
+      height: 240px;
+      background: black;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 16px;
+      resize: none;
+      text-align: center;
+    }
+  
+    .right-form textarea::placeholder {
+      color: white;
+    }
+
+    .submit-area {
+      text-align: center;
+      margin: 40px 0;
+    }
+  
+    .submit-area button {
+      background: black;
+      color: white;
+      border: none;
+      padding: 12px 50px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+<body>
+
+<div class="navbar">
+  <div class="nav-container">
+
+    <div class="logo">
+      <img src="Asset management/Logo/Takeover (LOGO).png" alt="logo">
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="Sports.html">Sports</a>
+      <a href="Contact.html" class="active">Contact</a>
+    </div>
+
+  </div>
+</div>
+
+<div class="contact-title">Contact Us</div>
+
+<form>
+
+  <div class="form-row">
+
+    <div class="left-form">
+      <input type="text" placeholder="First name">
+      <input type="text" placeholder="Last name">
+      <input type="text" placeholder="DOB (Date of Birth)">
+      <input type="email" placeholder="Email address">
+    </div>
+
+    <div class="right-form">
+      <textarea placeholder="Reason for Contact"></textarea>
+    </div>
+
+  </div>
+
+  <div class="submit-area">
+    <button type="submit">Submit</button>
+  </div>
+
+</form>
+
+</body>
+</html>
