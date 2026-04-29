@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="mystyle.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <img src="Logo/Takeover (LOGO).png" alt="SportsPulse Logo" onerror="this.style.display='none'; this.parentElement.style.fontSize='1rem'; this.parentElement.style.color='#fff'; this.parentElement.style.fontWeight='700'; this.parentElement.innerHTML='Logo';" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sports.html">Sports</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-content">
+
+    <div class="contact-title-wrap">
+      <div class="contact-title">Contact Us</div>
+    </div>
+
+    <div class="contact-form-layout">
+
+      <div class="form-fields">
+        <input
+          id="firstName"
+          class="form-input"
+          type="text"
+          placeholder="First name"
+        />
+        <input
+          id="lastName"
+          class="form-input"
+          type="text"
+          placeholder="Last name"
+        />
+        <input
+          id="dob"
+          class="form-input"
+          type="text"
+          placeholder="DOB (DD/MM/YYYY)"
+        />
+        <input
+          id="email"
+          class="form-input"
+          type="email"
+          placeholder="Email address"
+        />
+      </div>
+
+      <div>
+        <textarea
+          id="reason"
+          class="form-textarea"
+          placeholder="Reason for Contact"
+        ></textarea>
+      </div>
+ 
+    </div>
+
+    <div class="submit-wrap">
+      <button class="btn-submit" type="button" onclick="submitForm()">Submit</button>
+      <div id="successMsg" class="success-msg">
+        ✅ Message sent successfully! We'll be in touch soon.
+      </div>
+    </div>
+ 
+  </div>
+ 
+  <script>
+    function submitForm() {
+      const firstName = document.getElementById('firstName').value.trim();
+      const lastName  = document.getElementById('lastName').value.trim();
+      const dob       = document.getElementById('dob').value.trim();
+      const email     = document.getElementById('email').value.trim();
+      const reason    = document.getElementById('reason').value.trim();
+ 
+      if (!firstName || !lastName || !dob || !email || !reason) {
+        alert('Please fill in all fields before submitting.');
+        return;
+      }
+
+      const msg = document.getElementById('successMsg');
+      msg.classList.add('visible');
+
+      document.getElementById('firstName').value = '';
+      document.getElementById('lastName').value  = '';
+      document.getElementById('dob').value       = '';
+      document.getElementById('email').value     = '';
+      document.getElementById('reason').value    = '';
+
+      msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      setTimeout(() => {
+        msg.classList.remove('visible');
+      }, 5000);
+    }
+  </script>
+ 
+</body>
+</html>
